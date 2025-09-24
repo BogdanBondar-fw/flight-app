@@ -6,7 +6,7 @@ import Layout from "./components/Layout/Layout";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/flight-app">
       <Layout>
         <Routes>
           <Route path="/" element={<FlightsPage />} />
