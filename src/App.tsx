@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import FlightsPage from "./pages/FlightsPage";
 import FlightDetailsPage from "./pages/FlightDetailsPage";
 import CartPage from "./pages/CartPage";
@@ -6,7 +6,7 @@ import Layout from "./components/Layout/Layout";
 
 function App() {
   return (
-    <BrowserRouter basename="/flight-app">
+    <HashRouter>
       <Layout>
         <Routes>
           <Route path="/" element={<FlightsPage />} />
@@ -14,7 +14,7 @@ function App() {
           <Route path="/cart" element={<CartPage />} />
         </Routes>
       </Layout>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
